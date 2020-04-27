@@ -1,4 +1,2 @@
 #!/bin/bash
-echo 'import py_compile
-py_compile.compile("'"$PYFILE"'")' | python
-chmod u+x "$PYFILE""c"
+python3 -m compileall -b $PYFILE
