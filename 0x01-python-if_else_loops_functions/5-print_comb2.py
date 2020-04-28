@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 for i in range(0, 99):
-    if i < 98:
+    if i < 99:
         print("{:2d}".format(i), end=", ")
-print(98)
+print(99)
