@@ -12,9 +12,9 @@ if __name__ == "__main__":
     elif argv[2] is "-":
         print("{:d} - {:d} = {:d}".format(a, b, calc.sub(a, b)))
     elif argv[2] is "*":
-        print("{:d} * {:d} = {:d}".format(a, b, calc.div(a, b)))
+        print("{:d} * {:d} = {:d}".format(a, b, calc.mul(a, b)))
     elif argv[2] is "/":
-        print("{:d} / {:d} = {:d}".format(a, b, calc.mul(a, b)))
+        print("{:d} / {:d} = {:d}".format(a, b, calc.div(a, b)))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
