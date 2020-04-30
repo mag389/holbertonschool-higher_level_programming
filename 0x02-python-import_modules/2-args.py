@@ -5,4 +5,4 @@ if __name__ == "__main__":
         print("0 arguments.")
     else:
         for i in range(1, len(argv)):
-            print(i, " {}".format(argv[i]))
+            print("{:d}: {}".format(i, argv[i]))
