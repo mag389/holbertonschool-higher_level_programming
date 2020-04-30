@@ -6,7 +6,7 @@ if __name__ == "__main__":
         print("s.")
     elif len(argv) is 2:
         print(":")
-        print("{}".format(argv[1]))
+        print("{:d}: {}".format(1, argv[1]))
     else:
         print("s:")
         for i in range(1, len(argv)):
