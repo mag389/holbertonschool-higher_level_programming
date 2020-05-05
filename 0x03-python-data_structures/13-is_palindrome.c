@@ -10,12 +10,17 @@ int length(listint_t *head);
 */
 int is_palindrome(listint_t **head)
 {
-	listint_t *temp;
+	listint_t *temp = *head;
 	int i, len, *stack;
 
 	if (head == NULL || *head == NULL)
 		return (1);
-	len = length(*head);
+	for (len = 0;; len++)
+	{
+		if (temp == NULL)
+			break;
+		temp = temp->next;
+	}
 	stack = malloc(sizeof(int) * len);
 	if (stack == NULL)
 		return (1);
