@@ -11,7 +11,7 @@ int length(listint_t *head);
 int is_palindrome(listint_t **head)
 {
 	listint_t *temp = *head;
-	int i, len, *stack;
+	int i, len, stack[4096];
 
 	if (head == NULL || *head == NULL)
 		return (1);
@@ -21,9 +21,9 @@ int is_palindrome(listint_t **head)
 			break;
 		temp = temp->next;
 	}
-	stack = malloc(sizeof(int) * len);
-	if (stack == NULL)
-		return (1);
+/*	stack = malloc(sizeof(int) * len);*/
+/*	if (stack == NULL)*/
+/*		return (1);*/
 	temp = *head;
 	for (i = 0; i < len; i++)
 	{
@@ -35,12 +35,12 @@ int is_palindrome(listint_t **head)
 	{
 		if (temp->n != stack[i])
 		{
-			free(stack);
+/*			free(stack);*/
 			return (0);
 		}
 		temp = temp->next;
 	}
-	free(stack);
+/*	free(stack);*/
 	return (1);
 }
 
