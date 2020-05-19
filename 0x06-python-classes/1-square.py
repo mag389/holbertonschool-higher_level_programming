@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-class Square:    """
+
+
+class Square:
+    """
     Square - the square class
 
     Currently blank class
