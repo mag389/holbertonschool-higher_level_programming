@@ -15,6 +15,14 @@ class Square:
 
         _Square_size: self explanatory
         """
+        if type(position) is not tuple:
+            raise(TypeError("position must be a tuple of 2 positive integers"))
+        if value[1] < 0 or value[0] < 0:
+            raise(TypeError("position must be a tuple of 2 positive integers"))
+        if type(size) is not int:
+            raise(TypeError("size must be an integer"))
+        if size < 0:
+            raise(ValueError("size must be >= 0"))
         self.__size = size
         self.__position = position
 
