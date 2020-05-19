@@ -37,7 +37,6 @@ class SinglyLinkedList:
     def __init__(self):
         """ initializr for linked list"""
         self.__head = None
-        pass
 
     def sorted_insert(self, value):
         """ insert new node"""
