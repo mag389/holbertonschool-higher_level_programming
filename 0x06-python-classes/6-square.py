@@ -54,6 +54,7 @@ class Square:
         """ prints the square"""
         if self.__size is 0:
             print("")
+            exit()
         for i in range(0, self.position[1]):
             print("")
         for i in range(0, self.__size):
