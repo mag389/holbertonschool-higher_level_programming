@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ file for square with attribute"""
 
+
 class Square:
     """
     Square - the square class
