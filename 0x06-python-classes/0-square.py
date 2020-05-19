@@ -1,4 +1,7 @@
 #!/usr/bin/pyhton3
+""" blank square class"""
+
+
 class Square:
     """Square - the square class
 
