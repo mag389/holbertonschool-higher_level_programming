@@ -3,8 +3,10 @@ class Square:
     """Square - the square class
 
     Currently blank class
-    __init__ - makes instance
+
+    args:
+        none
+    attributes:
+        none - makes instance
     """
-    def __init__(self):
-        """ creates square instance"""
-        pass
+    pass
