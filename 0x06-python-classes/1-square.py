@@ -9,7 +9,7 @@ class Square:
     __init__ - makes instance
     """
     def __init__(self, _Square_size=0):
-        """
+        """__init__
         creates square instance
 
         _Square_size: self explanatory
