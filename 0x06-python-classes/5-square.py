@@ -1,4 +1,7 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
+"""prints the square class"""
+
+
 class Square:
     """
     Square - the square class
