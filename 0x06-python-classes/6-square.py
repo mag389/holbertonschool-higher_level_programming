@@ -62,12 +62,12 @@ class Square:
         """ prints the square"""
         if self.__size is 0:
             print("")
-            exit()
-        for i in range(0, self.position[1]):
-            print("")
-        for i in range(0, self.__size):
-            for j in range(0, self.position[0]):
-                print(" ", end="")
-            for j in range(0, self.__size - 1):
-                print("#", end="")
-            print("#")
+        else:
+            for i in range(0, self.position[1]):
+                print("")
+            for i in range(0, self.__size):
+                for j in range(0, self.position[0]):
+                    print(" ", end="")
+                for j in range(0, self.__size - 1):
+                    print("#", end="")
+                print("#")
