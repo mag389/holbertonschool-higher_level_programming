@@ -4,6 +4,7 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
+
 class TestMaxInteger(unittest.TestCase):
     """ the unit testing class"""
 
@@ -24,4 +25,4 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_empty(self):
         """ checks for nothing passsed"""
-        max_integer([]) == None
+        max_integer([]) is None
