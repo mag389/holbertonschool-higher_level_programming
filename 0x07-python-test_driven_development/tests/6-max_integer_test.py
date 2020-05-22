@@ -15,3 +15,13 @@ class TestMaxInteger(unittest.TestCase):
     def test_values(self):
         """checking for bad values"""
         self.assertRaises(TypeError, max_integer, 7)
+        self.assertRaises(TypeError, max_integer, None)
+
+    def test_str(self):
+        """checks failure if apssed string """
+        max_integer("hi") == 'i'
+        self.assertRaises(TypeError, max_integer, [1, 2, 3, "hi"])
+
+    def test_empty(self):
+        """ checks for nothing passsed"""
+        max_integer([]) == None

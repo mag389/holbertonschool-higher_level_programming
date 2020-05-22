@@ -14,6 +14,15 @@ h
 ...     print(e)
 text must be a string
 
+>>> text_indentation("$$$?$$$:$$$.$$$")
+$$$?
+<BLANKLINE>
+$$$:
+<BLANKLINE>
+$$$.
+<BLANKLINE>
+$$$
+
 >>> text_indentation("""Lorem ipsum dolor sit amet, co\
 ... nsectetur adipiscing elit. \
 ... Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
