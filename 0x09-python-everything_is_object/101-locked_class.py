@@ -4,6 +4,9 @@
 
 class LockedClass(object):
     """ the class itself """
+    def __init__(self):
+        """ init function, does nothing"""
+        return
 
     def __setattr__(self, name, value):
         """ over rides the setattr thing """
