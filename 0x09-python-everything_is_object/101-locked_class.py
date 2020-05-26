@@ -4,6 +4,9 @@
 
 class LockedClass(object):
     """ the class itself """
+
+    __slots__ = ['first_name']
+
     def __init__(self):
         """ init function, does nothing"""
         return
