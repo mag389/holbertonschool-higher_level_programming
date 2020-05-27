@@ -9,7 +9,6 @@ def text_indentation(text):
     beg = 1
     for char in text:
         if beg is 1 and char is " ":
-            beg = 0
             pass
         else:
             print(char, end="")
