@@ -25,10 +25,11 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_empty(self):
         """ checks for nothing passsed"""
-        max_integer([]) is None
+        self.assertEqual(max_integer([]), None)
+        self.assertEqual(max_integer([1]), 1)
 
     def test_edges(self):
         """ checks placement of max """
-        self.assertEquals(max_integer([1, 2, 3, 4]), 4)
-        self.assertEquals(max_integer([5, 2, 3, 4]), 5)
-        self.assertEquals(max_integer([5, 6, 3, 4]), 6)
+        self.assertEqual(max_integer([1, 2, 3, 4]), 4)
+        self.assertEqual(max_integer([5, 2, 3, 4]), 5)
+        self.assertEqual(max_integer([5, 6, 3, 4]), 6)
