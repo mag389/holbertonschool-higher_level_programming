@@ -20,5 +20,3 @@ if __name__ == "__main__":
     queens_placed = n
     answer = [[0, 0] for i in range(0, n)]
     print(answer)
-
-    while(n >=
