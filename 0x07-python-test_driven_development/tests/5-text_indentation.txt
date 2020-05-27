@@ -8,11 +8,26 @@ h.
 <BLANKLINE>
 h
 
+>>> text_indentation("Holberton. School? How are you: John")
+Holberton.
+<BLANKLINE>
+School?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+John
+
 >>> try:
 ...     text_indentation(7)
 ... except Exception as e:
 ...     print(e)
 text must be a string
+
+>>> try:
+...     text_indentation()
+... except Exception as e:
+...     print("hi")
+hi
 
 >>> text_indentation("$$$?$$$:$$$.$$$")
 $$$?
