@@ -8,7 +8,7 @@
 [[13 16]]
 
 >>> try:
-...     matrix_mul([[1, 2]])
+...     matrix_mul([[1]])
 ... except Exception as e:
 ...     print("hi")
 hi
