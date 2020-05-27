@@ -1,10 +1,10 @@
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
 >>> say_my_name("john", "smith")
-john smith
+My name is john smith
 
 >>> say_my_name("john")
-john 
+My name is john 
 
 >>> try:
 ...     say_my_name(12, "white")
@@ -19,5 +19,5 @@ first_name must be a string
 last_name must be a string
 
 >>> say_my_name("john", "smith")
-john smith
+My name is john smith
 
