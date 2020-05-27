@@ -8,6 +8,18 @@
 [[13 16]]
 
 >>> try:
+...     matrix_mul([[1, 2], [3, 4]])
+... except Exception as e:
+...     print("hi")
+hi
+
+>>> try:
+...     matrix_mul()
+... except Exception as e:
+...     print("hi")
+hi
+
+>>> try:
 ...     print(matrix_mul(7, [[1, 2], [3, 4]]))
 ... except Exception as e:
 ...     print(e)
