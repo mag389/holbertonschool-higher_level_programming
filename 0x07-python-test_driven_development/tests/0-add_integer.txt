@@ -1,4 +1,5 @@
     >>> add_integer = __import__('0-add_integer').add_integer
+    >>> import sys
 
     >>> add_integer(1, 2)
     3
@@ -24,3 +25,13 @@
     ... except Exception as e:
     ...    print(e)
     b must be an integer
+    >>> try:
+    ...     print(add_integer(float('nan'), 4))
+    ... except Exception as e:
+    ...     print(e)
+    cannot convert float NaN to integer
+    >>> try:
+    ...     print(add_integer(sys.float_info.max + sys.float_info.max))
+    ... except Exception as e:
+    ...     print(e)
+    cannot convert float infinity to integer
