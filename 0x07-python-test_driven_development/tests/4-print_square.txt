@@ -19,7 +19,6 @@
 ##########
 
 >>> print_square(0)
-<BLANKLINE>
 
 >>> try:
 ...     print_square(-1)
