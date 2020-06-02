@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+""" the square class file"""
+Rectangle = __import__('9-rectangle').Rectangle
+
+
+class Square(Rectangle):
+    """ square class from rectangle"""
+
+    def __init__(self, size):
+        """ instantiator for square"""
+        super().__init__(size, size)
+        self.__size = size
