@@ -30,6 +30,6 @@ class Student:
 
     def reload_from_json(self, json):
         """ reloads object from json"""
-        self.__dict__ = json
+        """ self.__dict__ = json """
         for item in json:
             setattr(self, item, json[item])
