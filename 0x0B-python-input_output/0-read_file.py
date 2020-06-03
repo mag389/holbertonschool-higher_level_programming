@@ -6,5 +6,4 @@ def read_file(filename=""):
     """ read file finction """
     with open(filename, 'r') as f:
         read_data = f.read()
-    f.closed
-    print(read_data)
+    print(read_data, end="")
