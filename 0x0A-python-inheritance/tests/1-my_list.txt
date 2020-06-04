@@ -16,3 +16,14 @@ to run "python3-m doctest -v ./tests/1-my_list.txt
 
 >>> print(my_list)
 [1, 4, 2, 3, 5]
+
+>>> my_list.append(-4)
+>>> my_list.print_sorted()
+[-4, 1, 2, 3, 4, 5]
+
+>>> my_list = None
+>>> try:
+...     my_list.print_sorted()
+... except Exception as e:
+...     print("no")
+no
