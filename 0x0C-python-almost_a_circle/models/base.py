@@ -52,8 +52,5 @@ class Base:
     def create(cls, **dictionary):
         """ returns an instance with attributes already set """
         dummy = cls(1, 1, 0, 0)
-        print(dictionary)
-        print(type(dictionary))
-        print(dummy)
-        dummy.update(kwargs=dictionary)
+        dummy.update(**dictionary)
         return dummy
