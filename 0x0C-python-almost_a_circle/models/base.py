@@ -54,3 +54,15 @@ class Base:
         dummy = cls(1, 1, 0, 0)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """ loads objects as json strings from file, makes them as objs """
+        retlist = []
+        filename = cls.__name__ + ".json"
+        with open(filename, 'r') as f:
+            text = f.read()
+        jsontxt = cls.from_json_string(text)
+        for item in jsontxt:
+            retlist.append(cls.create(**item))
+        return retlist
