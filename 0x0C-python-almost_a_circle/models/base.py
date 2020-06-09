@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ the base class file in the models folder """
 import json
+import csv
 
 
 class Base:
@@ -72,3 +73,46 @@ class Base:
         for item in jsontxt:
             retlist.append(cls.create(**item))
         return retlist
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ saves objects to file, but a csv file"""
+        if list_objs is None:
+            list_objs = []
+        dict_list = []
+        for item in list_objs:
+            dict_list.append(cls.to_dictionary(item))
+        filename = cls.__name__ + ".csv"
+        if cls.__name__ == "Rectangle":
+            fieldnames = ["id", "width", "height", "x", "y"]
+        else:
+            fieldnames = ["id", "size", "x", "y"]
+#        print(fieldnames)
+        with open(filename, "w") as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            for dictrow in dict_list:
+                writer.writerow(dictrow)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ loads objects from csv file """
+        retlist = []
+        filename = cls.__name__ + ".csv"
+        dictlist = []
+        try:
+            with open(filename, "r") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    # print(row)
+                    # print(type(row))
+                    dictlist.append(row)
+        except:
+            return []
+        for row in dictlist:
+            for key in row:
+                row[key] = int(row[key])
+        obj_list = []
+        for row in dictlist:
+            obj_list.append(cls.create(**row))
+        return obj_list
