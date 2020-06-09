@@ -2,6 +2,7 @@
 """ the base class file in the models folder """
 import json
 import csv
+import turtle
 
 
 class Base:
@@ -116,3 +117,39 @@ class Base:
         for row in dictlist:
             obj_list.append(cls.create(**row))
         return obj_list
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """ draws the shapes with turtles """
+        tim = turtle.Turtle()
+        tim.color('red')
+        tim.pensize(2)
+        tim.shape('turtle')
+        mag = 1
+
+        for rect in list_rectangles:
+            tim.goto(rect.x, rect.y)
+            tim.pendown()
+            tim.forward(rect.width * mag)
+            tim.left(90)
+            tim.forward(rect.height * mag)
+            tim.left(90)
+            tim.forward(rect.width * mag)
+            tim.left(90)
+            tim.forward(rect.height * mag)
+            tim.left(90)
+            tim.penup()
+        tim.color('blue')
+        for rect in list_squares:
+            tim.goto(rect.x, rect.y)
+            tim.pendown()
+            tim.forward(rect.width * mag)
+            tim.left(90)
+            tim.forward(rect.height * mag)
+            tim.left(90)
+            tim.forward(rect.width * mag)
+            tim.left(90)
+            tim.forward(rect.height * mag)
+            tim.left(90)
+            tim.penup()
+        turtle.done()
