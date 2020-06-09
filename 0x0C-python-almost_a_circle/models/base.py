@@ -63,8 +63,11 @@ class Base:
         """ loads objects as json strings from file, makes them as objs """
         retlist = []
         filename = cls.__name__ + ".json"
-        with open(filename, 'r') as f:
-            text = f.read()
+        try:
+            with open(filename, 'r') as f:
+                text = f.read()
+        except:
+            return []
         jsontxt = cls.from_json_string(text)
         for item in jsontxt:
             retlist.append(cls.create(**item))
