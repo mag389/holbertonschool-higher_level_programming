@@ -126,7 +126,8 @@ class Base:
         tim.pensize(2)
         tim.shape('turtle')
         mag = 1
-
+        if list_rectangles is None:
+            list_rectangles = []
         for rect in list_rectangles:
             tim.goto(rect.x, rect.y)
             tim.pendown()
@@ -140,6 +141,8 @@ class Base:
             tim.left(90)
             tim.penup()
         tim.color('blue')
+        if list_squares is None:
+            list_squares = []
         for rect in list_squares:
             tim.goto(rect.x, rect.y)
             tim.pendown()
