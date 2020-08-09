@@ -24,6 +24,6 @@ if __name__ == "__main__":
         order_by(State.id).all()
     if (result):
         for state in result:
-            print("{}: {}".format(state.id, state.name))
+            print("{}".format(state.id))
     if len(result) is 0:
-        print("Not Found")
+        print("Not found")
