@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ states script """
-import sqlalchemy
 import MySQLdb
 import sys
 
@@ -8,7 +7,6 @@ import sys
 if __name__ != '__main__':
     exit()
 if len(sys.argv) is not 4:
-    print("in if {}".format(len(sys.argv)))
     exit()
 # args are: username, passwd, db name
 conn = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
