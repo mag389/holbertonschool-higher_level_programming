@@ -19,7 +19,5 @@ if __name__ == "__main__":
     """ queries """
     for state in session.query(State).order_by(State.id):
         print(state.id, ": ", state.name, sep="")
-        for stat, city in session.query(State, City).\
-                filter(State.id == City.state_id).\
-                filter(City.state_id == state.id).order_by(City.id):
-            print("    ", city.id, ": ", city.name, sep="")
+        for city in state.cities:
+            print("\t", city.id, ": ", city.name, sep="")
