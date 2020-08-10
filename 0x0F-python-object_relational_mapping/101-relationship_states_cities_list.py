@@ -16,14 +16,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    """ add california """
-    new_state = State(name='California')
-    session.add(new_state)
-    new_city = City(name='San Francisco', state_id=1)
-    new_state.cities = [new_city]
-    session.add(new_city)
-    session.commit()
-
     """ queries """
     for state in session.query(State).order_by(State.id):
         print(state.id, ": ", state.name, sep="")
