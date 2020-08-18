@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# gedy size of freponse from given url
+# sends get displays body
 if [ $# -lt 1 ]
 then
 	echo "no ip given"
 else
-	curl -s "$1" | wc -c
+	curl -sL "$1"
 fi
