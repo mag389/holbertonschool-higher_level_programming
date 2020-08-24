@@ -11,8 +11,8 @@ if __name__ == '__main__':
     else:
         q = ""
     data = {"q": q}
-    r = requests.post(url, data)
     try:
+        r = requests.post(url, data)
         json = r.json()
         if len(json) == 0:
             print("No result")
