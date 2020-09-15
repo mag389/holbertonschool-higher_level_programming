@@ -1,11 +1,12 @@
 #!/usr/bin/node
-let num1 = parseInt(process.argv[2]);
-if (isNaN(num1)) {
-  console.log(1);
-} else {
-  let retNum = 1;
-  for (; num1 > 0; num1--) {
-    retNum *= num1;
+const num1 = parseInt(process.argv[2]);
+console.log(fact(num1));
+function fact (num1) {
+  if (isNaN(num1)) {
+    return 1;
+  } else if (num1 === 1) {
+    return 1;
+  } else {
+    return (num1 * fact(num1 - 1));
   }
-  console.log(retNum);
 }
