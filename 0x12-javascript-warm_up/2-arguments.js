@@ -1,6 +1,6 @@
 #!/usr/bin/node
 /* prints based on number of given arguments to script */
-const process = require('process');
+// const process = require('process');
 // that line is not strictly neccesary
 // var args = process.argv;
 // console.log(args.length)
